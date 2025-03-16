@@ -3,7 +3,7 @@ export default function handler(req, res) {
   const mockData = {
     variant_code: id,
     model: 'Verna',
-    images: ['/images/verna.jpg'],
+    images: ['/images/download.jpeg'],
     engine_type: '1.5 l MPi Petrol',
     transmission: 'Automatic',
     fuel_efficiency: '18 km/l',
