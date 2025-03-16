@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 import Card from '@/components/Card';
 
 export default function HomePage() {
@@ -9,6 +9,14 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
+    // Check if the user is logged in
+    const token = localStorage.getItem('token');
+    if (!token) {
+      router.push('/login'); // Redirect to Login Page if not logged in
+      return;
+    }
+
+    // Fetch cars data
     const fetchCars = async () => {
       try {
         const response = await axios.get('/api/cars');
@@ -20,7 +28,7 @@ export default function HomePage() {
       }
     };
     fetchCars();
-  }, []);
+  }, [router]);
 
   if (loading) {
     return (
@@ -41,7 +49,7 @@ export default function HomePage() {
             className="cursor-pointer"
           >
             <img
-              src={car.images[0]} // Use the first image as the main image
+              src={car.images[0]}
               alt={car.model}
               className="w-full h-48 object-cover rounded-t-lg"
             />

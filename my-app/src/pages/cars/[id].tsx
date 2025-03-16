@@ -10,12 +10,20 @@ export default function CarDetailsPage() {
   const [car, setCar] = useState(null);
 
   useEffect(() => {
+    // Check if the user is logged in
+    const token = localStorage.getItem('token');
+    if (!token) {
+      router.push('/login'); // Redirect to Login Page if not logged in
+      return;
+    }
+
+    // Fetch car details
     const fetchCar = async () => {
       const response = await axios.get(`/api/cars/${id}`);
       setCar(response.data);
     };
     if (id) fetchCar();
-  }, [id]);
+  }, [id, router]);
 
   if (!car) return <div>Loading...</div>;
 

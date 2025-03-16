@@ -8,7 +8,7 @@ interface InputProps {
   className?: string;
 }
 
-export default function Input({ type, value, onChange, placeholder, className }: InputProps) {
+export function Input({ type, value, onChange, placeholder, className }: InputProps) {
   return (
     <input
       type={type}

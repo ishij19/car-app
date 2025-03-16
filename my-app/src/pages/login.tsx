@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import Button from '@/components/Button';
-import Input from '@/components/Input';
+import jwtDecode from 'jwt-decode';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -12,8 +14,9 @@ export default function LoginPage() {
   const handleLogin = async () => {
     try {
       const response = await axios.post('/api/login', { email, password });
-      localStorage.setItem('token', response.data.token);
-      router.push('/');
+      const token = response.data.token;
+      localStorage.setItem('token', token); // Store token in localStorage
+      router.push('/'); // Redirect to Car Home Page
     } catch (error) {
       console.error('Login failed', error);
     }
@@ -25,7 +28,7 @@ export default function LoginPage() {
         <h1 className="text-2xl font-bold mb-6">Login</h1>
         <div className="space-y-4">
           <div>
-            <label>Email</label>
+            <Label>Email</Label>
             <Input
               type="email"
               value={email}
@@ -33,7 +36,7 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <label>Password</label>
+            <Label>Password</Label>
             <Input
               type="password"
               value={password}
