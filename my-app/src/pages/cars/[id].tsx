@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function CarDetailsPage() {
   const router = useRouter();

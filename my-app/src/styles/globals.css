@@ -1,184 +1,167 @@
-/* src/styles/globals.css */
+/* 🌟 General Styles */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f3f4f6; /* Light gray background */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .button {
-    background-color: #3b82f6; /* Blue */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #2563eb; /* Darker blue */
-  }
-  
-  .input {
-    padding: 10px;
-    border: 1px solid #d1d5db; /* Light gray */
-    border-radius: 6px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .input:focus {
-    outline: none;
-    border-color: #3b82f6; /* Blue */
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Blue shadow */
-  }
-  
-  .label {
-    font-weight: 500;
-    margin-bottom: 5px;
-    display: block;
-  }
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  color: #fff;
+}
 
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #535382;
-  }
-  
-  .login-box {
-    background-color: rgb(255, 255, 255);
-    padding: 32px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .login-box h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
+/* 🔹 Centering Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .car-image {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .car-details {
-    padding: 16px;
-  }
-  
-  .car-details h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  
-  .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 20px;
-  }
+/* 🎴 Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 📸 Car Image Styling */
+.car-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 🏷️ Car Details */
+.car-details {
+  padding: 16px;
+}
+
+.car-details h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* 🔹 Button Styling */
+.button {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Stylish gradient */
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  transform: scale(1.05);
+}
+
+/* 📜 Input Fields */
+.input {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff758c;
+  box-shadow: 0 0 5px rgba(255, 117, 140, 0.5);
+}
+
+/* 📌 Login Page Styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+/* 📌 Grid for Car Cards */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🏎️ Car Details Container */
+.car-details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* 🚗 Large Car Image */
+.car-image-large {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.car-info {
+  width: 50%; /* Ensures details take half the width */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* 🔹 Tabs & Features */
+.tabs {
+  margin-top: 20px;
+}
+
+.tab h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.features {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+/* ✨ Responsive Design */
+@media (max-width: 768px) {
   .car-details-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  .car-image-large {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
+
+  .login-box {
+    max-width: 90%;
   }
-  
-  .car-info {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tabs {
-    margin-top: 20px;
-  }
-  
-  .tab {
-    margin-bottom: 20px;
-  }
-  
-  .tab h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  
-  .feature {
-    background-color: #f9fafb;
-    padding: 10px;
-    border-radius: 6px;
-  }
-  
-  .feature-name {
-    font-weight: 500;
-  }
-  
-  .feature-value {
-    color: #4b5563;
-  }
-  
-  .feature-category {
-    font-size: 12px;
-    color: #6b7280;
-  }
+}

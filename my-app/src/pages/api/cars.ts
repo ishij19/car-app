@@ -12,7 +12,7 @@ export default function handler(req, res) {
         variant_code: 'Creta-SX-2024',
         model: 'Creta',
         created_at: '2025-03-12T10:15:30.048072Z',
-        images: ['/images/creta.jpeg'],
+        images: ['/images/verna.jpeg'],
         carPricingHistory: [{ price: 18000 }],
       },
       {
@@ -68,7 +68,7 @@ export default function handler(req, res) {
         variant_code: 'Kona-Electric-2024',
         model: 'Kona Electric',
         created_at: '2025-03-04T22:25:40.828072Z',
-        images: ['/images/kona.jpeg'],
+        images: ['/images/konaelectric.jpeg'],
         carPricingHistory: [{ price: 28000 }],
       },
     ],

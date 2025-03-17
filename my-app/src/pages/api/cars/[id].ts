@@ -93,7 +93,7 @@ export default function handler(req, res) {
     },
     'Kona-Electric-2024': {
       model: 'Kona Electric',
-      images: ['/images/kona.jpeg'],
+      images: ['/images/konaelectric.jpeg'],
       engine_type: 'Electric',
       transmission: 'Automatic',
       fuel_efficiency: '452 km/charge',
